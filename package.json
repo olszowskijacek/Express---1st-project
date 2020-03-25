@@ -1,0 +1,8 @@
+{
+  "name": "Express---1st-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/olszowskijacek/Express---1st-project.git",
+  "author": "Jacek Olszowski <jacek.olszowski1@gmail.com>",
+  "license": "MIT"
+}
