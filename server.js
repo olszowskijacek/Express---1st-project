@@ -30,6 +30,8 @@ app.get('/history', (req, res) => {
     res.show('history.html');
 });
 
+app.use(express.static(path.join(__dirname + '/public')));
+
 app.use((req, res) => {
     res.status(404).send('404 not found...')
 })
