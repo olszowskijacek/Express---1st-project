@@ -10,31 +10,24 @@ app.set('view engine', '.hbs');
 
 app.use(express.static(path.join(__dirname + '/public')));
 
-app.use((req, res, next ) => {
-    res.show = (name) => {
-        res.sendFile(path.join(__dirname + `/views/${name}`));
-    };
-    next();
-});
-
 app.get('/', (req, res) => {
-    res.show('index.html');
-});
+    res.render('index', { layout: false });
+  });
 
 app.get('/about', (req, res) => {
-    res.show('about.html');
+    res.render('about', {layout: false, name: req.params.name});
 });
 
 app.get('/contact', (req, res) => {
-    res.show('contact.html');
+    res.render('contact', {layout: false, name: req.params.name});
 });
 
 app.get('/info', (req, res) => {
-    res.show('info.html');
+    res.render('info', {layout: false, name: req.params.name});
 });
 
 app.get('/history', (req, res) => {
-    res.show('history.html');
+    res.render('history', {layout: false, name: req.params.name});
 });
 
 app.get('/hello/:name', (req, res) => {
