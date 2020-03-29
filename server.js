@@ -11,7 +11,7 @@ app.set('view engine', '.hbs');
 app.use(express.static(path.join(__dirname + '/public')));
 
 app.get('/', (req, res) => {
-    res.render('index',);
+    res.render('index');
   });
 
 app.get('/about', (req, res) => {
@@ -23,11 +23,11 @@ app.get('/contact', (req, res) => {
 });
 
 app.get('/info', (req, res) => {
-    res.render('info',);
+    res.render('info');
 });
 
 app.get('/history', (req, res) => {
-    res.render('history',);
+    res.render('history', {layout: 'dark'});
 });
 
 app.get('/hello/:name', (req, res) => {

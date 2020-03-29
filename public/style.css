@@ -2,3 +2,12 @@ h1 {
     font-weight: lighter;
     font-style: italic;
 }
+
+.dark-layout {
+    color: white;
+    background-color: black;
+}
+
+.dark-layout a {
+    color: white;
+}
