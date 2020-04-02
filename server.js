@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
+const multer = require('multer');
 
+var upload = multer({dest: 'uploads/'});
 const app = express();
 
 
@@ -35,7 +37,7 @@ app.get('/hello/:name', (req, res) => {
     res.render('hello', { layout: false, name: req.params.name });
   });
 
-app.post('/contact/send-message', (req, res) => {
+app.post('/contact/send-message', upload.none(), (req, res) => {
 
     const { author, sender, title, message, image } = req.body;
     if(author && sender && title && message && image){
