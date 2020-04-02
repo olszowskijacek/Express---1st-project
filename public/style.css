@@ -108,6 +108,9 @@ button {
   animation-name: fadeIn;
   animation-duration: 1s;
 }
+.isSent p {
+    color: white;
+}
 
 @-webkit-keyframes fadeIn {
   from {
